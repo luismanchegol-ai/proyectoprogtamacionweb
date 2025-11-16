@@ -1,0 +1,205 @@
+:root {
+  --negro: #000000;
+  --gris-oscuro: #141414;
+  --gris-medio: #282828;
+  --morado-oscuro: #230046;
+  --morado-intenso: #320064;
+  --texto-claro: #ffffff;
+  --texto-suave: #cccccc;
+  --correcto: #2ecc71;
+  --incorrecto: #e74c3c;
+}
+
+/* === 🧼 RESETEO BÁSICO === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--negro);
+  color: var(--texto-claro);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === 🔝 ENCABEZADO === */
+header {
+  background: linear-gradient(90deg, var(--morado-oscuro), var(--morado-intenso));
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: var(--texto-claro);
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+nav button {
+  background-color: var(--gris-medio);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: var(--texto-claro);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+nav button:hover {
+  background-color: var(--morado-intenso);
+  transform: translateY(-2px);
+}
+
+/* === 📄 CONTENIDO PRINCIPAL === */
+main {
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--gris-oscuro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+section {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+/* === 🧩 LISTA DE DESAFÍOS === */
+#lista-desafios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#lista-desafios button {
+  background-color: var(--morado-oscuro);
+  border: 2px solid var(--morado-intenso);
+  color: var(--texto-claro);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 250px;
+  text-align: center;
+}
+
+#lista-desafios button:hover {
+  background-color: var(--morado-intenso);
+  transform: scale(1.05);
+}
+
+/* === 📚 CONTENIDO DEL DESAFÍO === */
+#contenido-desafio {
+  background-color: var(--gris-medio);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(50, 0, 100, 0.5);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+#contenido-desafio h2 {
+  color: var(--texto-claro);
+  margin-bottom: 1rem;
+}
+
+#contenido-desafio p {
+  color: var(--texto-suave);
+  margin-bottom: 1rem;
+}
+
+.imagenes-leccion {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.nota-img {
+  width: 80px;
+  height: auto;
+}
+
+.nota-img-grande {
+  width: 120px;
+  height: auto;
+  margin: 1rem auto;
+}
+
+/* === 🎛️ BOTONES GENERALES === */
+#contenido-desafio button {
+  background-color: var(--morado-oscuro);
+  border: none;
+  padding: 0.7rem 1.4rem;
+  color: var(--texto-claro);
+  border-radius: 8px;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#contenido-desafio button:hover {
+  background-color: var(--morado-intenso);
+  transform: translateY(-2px);
+}
+
+/* === ✅❌ BOTONES DE OPCIONES === */
+.opcion {
+  display: block;
+  background-color: var(--gris-oscuro);
+  border: 2px solid var(--morado-oscuro);
+  border-radius: 8px;
+  padding: 0.7rem;
+  margin: 0.5rem auto;
+  width: 60%;
+  color: var(--texto-claro);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.opcion:hover {
+  background-color: var(--morado-intenso);
+}
+
+.correcta {
+  background-color: var(--correcto) !important;
+  color: var(--negro);
+}
+
+.incorrecta {
+  background-color: var(--incorrecto) !important;
+}
+
+/* === 🔙 BOTÓN VOLVER === */
+.boton-volver {
+  background-color: var(--gris-medio);
+  border: 2px solid var(--morado-intenso);
+  color: var(--texto-claro);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.boton-volver:hover {
+  background-color: var(--morado-intenso);
+}
